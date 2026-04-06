@@ -1,66 +1,137 @@
 import { motion } from 'motion/react';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Globe, HeartHandshake, PawPrint } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
-        <img
-          src="https://images.unsplash.com/photo-1760891874998-21ecb8c2189a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYXR1cmUlMjBjb25zZXJ2YXRpb24lMjBmb3Jlc3QlMjBncmVlbnxlbnwxfHx8fDE3NzQ4MzU0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="Nature Conservation"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
+    <section className="relative min-h-screen w-full overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,214,102,0.22),transparent_24%),radial-gradient(circle_at_20%_25%,rgba(120,177,138,0.22),transparent_28%),linear-gradient(135deg,#0f1d16,#18382d_42%,#10261e)]" />
+
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute left-[-8rem] top-24 h-64 w-64 rounded-full bg-amber-200/10 blur-3xl" />
+        <div className="absolute right-[-5rem] top-16 h-72 w-72 rounded-full bg-emerald-300/10 blur-3xl" />
+        <div className="absolute bottom-[-6rem] left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-sky-300/10 blur-3xl" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 sm:px-8">
+      <div className="absolute inset-x-0 top-20 z-0 flex justify-center px-6">
+        <div className="grid w-full max-w-3xl grid-cols-3 gap-4 sm:gap-6">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.45 }}
+            className="rounded-[2rem] border border-white/10 bg-white/6 p-5 text-white/90 backdrop-blur-md"
+          >
+            <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-amber-300/20 text-amber-200">
+              <PawPrint className="h-7 w-7" />
+            </div>
+            <p className="text-sm uppercase tracking-[0.24em] text-white/55">Animal</p>
+            <p className="mt-3 text-lg font-light text-white sm:text-xl">Loofio the dog who started the walk</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.6 }}
+            className="rounded-[2rem] border border-white/10 bg-white/6 p-5 text-white/90 backdrop-blur-md"
+          >
+            <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-rose-300/20 text-rose-100">
+              <HeartHandshake className="h-7 w-7" />
+            </div>
+            <p className="text-sm uppercase tracking-[0.24em] text-white/55">Human</p>
+            <p className="mt-3 text-lg font-light text-white sm:text-xl">People choosing action over waiting</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.75 }}
+            className="rounded-[2rem] border border-white/10 bg-white/6 p-5 text-white/90 backdrop-blur-md"
+          >
+            <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-sky-300/20 text-sky-100">
+              <Globe className="h-7 w-7" />
+            </div>
+            <p className="text-sm uppercase tracking-[0.24em] text-white/55">Earth</p>
+            <p className="mt-3 text-lg font-light text-white sm:text-xl">A cleaner route, one day at a time</p>
+          </motion.div>
+        </div>
+      </div>
+
+      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 py-20 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center max-w-4xl w-full"
+          className="w-full max-w-5xl pt-56 text-center sm:pt-64 md:pt-72"
         >
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mb-5 text-sm font-medium uppercase tracking-[0.35em] text-amber-200/90"
+          >
+            Daily Walk. Daily Pickup. Daily Care.
+          </motion.p>
+
           <motion.h1
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white mb-6 tracking-tight px-4"
+            className="mb-6 px-4 text-5xl font-light tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl"
           >
             Loofio Cares
           </motion.h1>
-          
+
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: '100%' }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="h-px bg-gradient-to-r from-transparent via-emerald-400 to-transparent mb-8"
+            className="mb-8 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent"
           />
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="text-lg sm:text-xl md:text-2xl text-white/90 font-light mb-12 px-4"
+            className="mx-auto mb-5 max-w-3xl px-4 text-lg font-light text-white/90 sm:text-xl md:text-2xl"
           >
-            Protecting our planet, one cleanup at a time
+            Loofio is our dog. We started this project during our walks with him, after seeing trash everywhere and realizing we did not need to wait for a big event to begin.
           </motion.p>
 
-          <motion.button
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.15 }}
+            className="mx-auto mb-12 max-w-2xl px-4 text-base leading-relaxed text-white/75 sm:text-lg"
+          >
+            Loofio Cares is about doing one small real thing every day: grab a picker, walk the dog, and leave the street cleaner than we found it.
+          </motion.p>
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.4 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => document.getElementById('mission')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-4 min-h-[44px] min-w-[44px] bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300 touch-manipulation"
+            className="flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
-            Learn More
-          </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+              onClick={() => document.getElementById('story')?.scrollIntoView({ behavior: 'smooth' })}
+              className="min-h-[44px] min-w-[44px] rounded-full bg-amber-300 px-8 py-4 text-stone-950 transition-all duration-300 hover:bg-amber-200"
+            >
+              Read Our Story
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+              onClick={() => document.getElementById('track')?.scrollIntoView({ behavior: 'smooth' })}
+              className="min-h-[44px] min-w-[44px] rounded-full border border-white/25 bg-white/10 px-8 py-4 text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20"
+            >
+              See Daily Track
+            </motion.button>
+          </motion.div>
+
         </motion.div>
 
-        {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
