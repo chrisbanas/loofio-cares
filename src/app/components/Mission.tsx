@@ -21,7 +21,7 @@ export function Mission() {
           </h2>
           <div className="mx-auto mb-8 h-1 w-24 bg-amber-500" />
           <p className="mx-auto max-w-3xl px-4 text-lg leading-relaxed text-stone-700 sm:text-xl">
-            Loofio Cares began with our daily walks, our love of nature, and one decision to stop waiting.
+            Loofio Cares began with daily walks, a love of nature, and the choice to start.
           </p>
         </motion.div>
 
@@ -52,10 +52,10 @@ export function Mission() {
             className="space-y-6 px-4 text-stone-700"
           >
             <h3 className="text-2xl font-light text-stone-900 sm:text-3xl">
-              Why we stopped waiting
+              The Start Of Loofio Cares
             </h3>
             <p className="text-base leading-relaxed sm:text-lg">
-              We walk our dog, Loofio, every day around our neighborhood. On weekends, we take him on longer walks, usually to a hiking trail or the beach.
+              Loofio is our dog. We walk him several times a day around our neighborhood, and on weekends we take him on longer walks, usually to a hiking trail or the beach.
             </p>
             <p className="text-base leading-relaxed sm:text-lg">
               We love nature. Time outside feels like a reset for us. It gives us energy for the week ahead. Because of Loofio, we have had more chances to be close to nature and notice the quiet details of daily life: spring flowers in bloom, the bright summer sun, yellow autumn leaves, and the stillness of winter.
