@@ -53,10 +53,10 @@ export function GetInvolved() {
                 Reach out if you want to share your own cleanup story, ask a question, or just say hello. We want Loofio Cares to feel personal and real.
               </p>
               <a
-                href="mailto:hello@loofiocares.org"
+                href="mailto:loofiollc@gmail.com"
                 className="inline-flex min-h-[44px] items-center break-all text-emerald-700 transition-colors hover:text-emerald-800"
               >
-                <span className="text-base sm:text-lg">hello@loofiocares.org</span>
+                <span className="text-base sm:text-lg">loofiollc@gmail.com</span>
               </a>
             </div>
           </motion.div>

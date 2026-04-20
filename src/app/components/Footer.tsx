@@ -15,7 +15,7 @@ export function Footer() {
           <div className="mb-6">
             <h3 className="text-2xl sm:text-3xl font-light mb-2">Loofio Cares</h3>
             <p className="px-4 text-sm text-stone-400 sm:text-base">
-              A daily trash-pickup habit inspired by walking Loofio
+              Inspired by walking Loofio.
             </p>
           </div>
 
@@ -35,7 +35,7 @@ export function Footer() {
             >
               <Heart className="w-4 h-4 text-emerald-500 fill-emerald-500" />
             </motion.div>
-            <span>for cleaner walks and a cleaner earth</span>
+            <span>for the earth beneath our feet</span>
           </div>
 
           <p className="px-4 text-xs text-stone-500 sm:text-sm">
